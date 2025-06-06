@@ -1,0 +1,120 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.container {
+    max-width: 600px;
+    padding: 2rem;
+}
+
+
+.title {
+    font-family: 'Anton', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.description {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.quote-button {
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    border: 2px solid white;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.quote-button:hover {
+    background-color: white;
+    color: black;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000;
+    padding: 1rem 2rem;
+    flex-wrap: wrap;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.nav-link {
+    color: #FFD700; /* Light gold */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    font-family: 'Anton', sans-serif;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link:active {
+    color: #B8860B; /* Dark gold */
+}
+
+.logo img {
+    height: 200px;
+    width: auto;
+    border-radius: 8px;
+}
+
+.contact-details a {
+    color: #FFD700; /* Light gold */
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-family: 'Anton', sans-serif;
+}
+
+.contact-details a:hover,
+.contact-details a:active {
+    color: #B8860B; /* Dark gold */
+    text-decoration: underline;
+}
+
+.gallery-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem;
+}
+
+
+.gallery-img {
+    width: 90%; /* or 100% if you want full-width */
+    max-width: 600px;
+    height: auto;
+    border: 2px solid #FFD700;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.gallery-img:hover {
+    transform: scale(1.02);
+    border-color: #B8860B;
+}

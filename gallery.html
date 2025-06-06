@@ -1,0 +1,53 @@
+
+<!-- gallery.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - TimberGuard</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+</head>
+<body>
+	<header>
+	  <div class="navbar">
+		<div class="nav-links">
+		  <a href="index.html" class="nav-link">Home</a>
+		  <a href="about.html" class="nav-link">About</a>
+		  <a href="services.html" class="nav-link">Services</a>
+		  <a href="gallery.html" class="nav-link">Gallery</a>
+		  <a href="contact.html" class="nav-link">Contact</a>
+		</div>
+		<div class="logo">
+		  <img src="images/logo.jpg" alt="TimberGuard Logo">
+		</div>
+	  </div>
+	</header>
+
+    <div class="container">
+        <h1 class="title">Project Gallery</h1>
+        <p class="description">
+            Take a look at our recent work. From full installations to clean, crisp finishes—every TimberGuard job reflects our commitment to quality.
+        </p>
+    </div>
+	<div class="gallery-grid" id="gallery"></div>
+
+	<script>
+	  const imageFolder = 'images/gallery/';
+	  const totalImages = 200; // adjust to the number of images available
+	  const imageLimit = 2; // number of images to show at once
+
+	  const gallery = document.getElementById('gallery');
+
+	  for (let i = 1; i <= imageLimit; i++) {
+		  const img = document.createElement('img');
+		  img.src = `${imageFolder}img${i}.jpg`;
+		  img.alt = `Gallery image ${i}`;
+		  img.className = 'gallery-img';
+		  gallery.appendChild(img);
+	  }
+	</script>
+
+</body>
+</html>

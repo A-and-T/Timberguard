@@ -156,3 +156,29 @@ body {
     transform: scale(1.02);
     border-color: #B8860B;
 }
+
+.services-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  align-items: center;
+}
+
+.service-card {
+  background-color: #111;
+  border: 2px solid #FFD700;
+  border-radius: 12px;
+  padding: 1rem;
+  max-width: 600px;
+  width: 90%;
+  text-align: left;
+  color: white;
+}
+
+.service-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 0.75rem;
+}

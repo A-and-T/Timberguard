@@ -2,51 +2,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services - TimberGuard</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Services - TimberGuard</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
 </head>
 <body>
-	<header>
-		<div class="navbar">
-		  <div class="hamburger" id="hamburger">&#9776;</div>
-
-		  <div class="nav-links" id="navLinks">
-			<a href="index.html" class="nav-link">Home</a>
-			<a href="about.html" class="nav-link">About</a>
-			<a href="services.html" class="nav-link">Services</a>
-			<a href="gallery.html" class="nav-link">Gallery</a>
-			<a href="contact.html" class="nav-link">Contact</a>
-		  </div>
-
-		  <div class="logo">
-			<img src="images/logo.jpg" alt="TimberGuard Logo">
-		  </div>
-		</div>
-
-	</header>
-
-    <div class="container">
-        <h1 class="title" id="services_title">Our Services...</h1>
-        <p class="description" id="services_description">
-            We specialize in seamless gutter installation, gutter replacement, leaf guard systems, and seasonal maintenance. Each service is tailored to protect your home year-round!
-        </p>
+  <header>
+    <div class="navbar">
+      <div class="hamburger" id="hamburger">&#9776;</div>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </div>
+      <div class="logo">
+        <img src="images/logo.jpg" alt="TimberGuard Logo">
+      </div>
     </div>
-</body>
-<script src="js/content.js"></script>
-	
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const hamburger = document.getElementById('hamburger');
-    const navLinks = document.getElementById('navLinks');
+  </header>
 
-    if (hamburger && navLinks) {
-      hamburger.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-      });
-    }
-  });
-</script>
+  <div class="container">
+    <h1 class="title" id="services_title">Our Services...</h1>
+    <p class="description" id="services_description">
+      We specialize in seamless gutter installation, gutter replacement, leaf guard systems, soffit and fascia installation, and seasonal maintenance. Each service is tailored to protect your home year-round!
+    </p>
+
+    <div class="services-grid">
+      <!-- Each service card -->
+      <div class="service-card">
+        <img src="images/services/gutter installation.jpg" alt="Gutter Installation">
+        <h2>Gutter Installation</h2>
+        <p>Expert seamless gutter installation to protect your home from water damage.</p>
+      </div>
+
+      <div class="service-card">
+        <img src="images/services/gutter cleaning.jpg" alt="Gutter Cleaning">
+        <h2>Gutter Cleaning</h2>
+        <p>Seasonal or as-needed gutter cleaning to keep your system flowing freely.</p>
+      </div>
+
+      <div class="service-card">
+        <img src="images/services/gutter guard.jpg" alt="Gutter Guard">
+        <h2>Gutter Guard</h2>
+        <p>Install durable guards to block leaves and reduce your maintenance needs.</p>
+      </div>
+
+      <div class="service-card">
+        <img src="images/services/soffit and fascia.jpg" alt="Soffit and Fascia">
+        <h2>Soffit & Fascia</h2>
+        <p>Upgrade or repair your home's soffit and fascia for both function and curb appeal.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/content.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const hamburger = document.getElementById('hamburger');
+      const navLinks = document.getElementById('navLinks');
+      if (hamburger && navLinks) {
+        hamburger.addEventListener('click', () => {
+          navLinks.classList.toggle('active');
+        });
+      }
+    });
+  </script>
+</body>
 </html>

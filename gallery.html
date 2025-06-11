@@ -33,21 +33,32 @@
     </div>
 	<div class="gallery-grid" id="gallery"></div>
 <script src="js/content.js"></script>
-	<script>
-	  const imageFolder = 'images/gallery/';
-	  const totalImages = 200; // adjust to the number of images available
-	  const imageLimit = 5; // number of images to show at once
+<script>
+  const imageFolder = 'images/gallery/';
+  const totalImages = 200; // maximum number of image numbers to check
+  const imageLimit = 5;    // number of images to show at most
+  let shownImages = 0;
 
-	  const gallery = document.getElementById('gallery');
+  const gallery = document.getElementById('gallery');
 
-	  for (let i = 1; i <= imageLimit; i++) {
-		  const img = document.createElement('img');
-		  img.src = `${imageFolder}img${i}.jpg`;
-		  img.alt = `Gallery image ${i}`;
-		  img.className = 'gallery-img';
-		  gallery.appendChild(img);
-	  }
-	</script>
+  function tryAddImage(i) {
+    const img = new Image();
+    img.src = `${imageFolder}img${i}.jpg`;
+    img.alt = `Gallery image ${i}`;
+    img.className = 'gallery-img';
+
+    img.onload = () => {
+      gallery.appendChild(img);
+      shownImages++;
+    };
+    // Skip if not found (img.onerror does nothing)
+  }
+
+  for (let i = 1; i <= totalImages && shownImages < imageLimit; i++) {
+    tryAddImage(i);
+  }
+</script>
+
 
 </body>
 

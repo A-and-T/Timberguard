@@ -1,0 +1,31 @@
+# TimberGuard Premium Seamless Gutters — robots.txt
+# Crawl rules
+User-agent: *
+Allow: /
+
+Sitemap: https://timberguardgutters.com/sitemap.xml
+
+# Services:
+# - Gutter installation
+# - Gutter guard systems
+# - Gutter cleaning
+# - Soffit & fascia installation/repair
+# - Licensed general contracting
+
+# Primary hub: Rhinelander, WI
+
+# Service area towns & villages (approx. 1-hour radius):
+# Wisconsin:
+# Park Falls, Phillips, Fifield, Lugerville, Cranberry Lake, Brantwood, Tripoli,
+# Ogema, Spirit, Westboro, Rib Lake, Merrill, Irma, Bloomville, Gleason, Dudley,
+# Parrish, Harrison, Bradley, Tomahawk, Woodboro, Goodnow, Harshaw, Hazelhurst,
+# Minocqua, Woodruff, Arbor Vitae, Lake Tomahawk, St. Germain, Eagle River,
+# Sugar Camp, Three Lakes, Hiles, Monico, Pelican Lake, Elcho, Pearson, Pickerel,
+# Summit Lake, Deerbrook, Mole Lake, Crandon, Laona, Argonne, Choate, Lily
+
+# Upper Michigan:
+# Watersmeet, Land O’ Lakes, Conover, Phelps, Clearwater Lake, Iron River, Caspian
+
+# Private directories (if needed):
+# Disallow: /admin/
+# Disallow: /dev/

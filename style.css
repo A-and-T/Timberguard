@@ -153,7 +153,7 @@ body {
 }
 
 .gallery-img:hover {
-    transform: scale(1.02);
+    transform: scale(1.20);
     border-color: #B8860B;
 }
 
@@ -174,8 +174,12 @@ body {
   width: 90%;
   text-align: left;
   color: white;
+  transition: transform 0.3s ease;
 }
-
+.service-card:hover {
+    transform: scale(1.20);
+    border-color: #B8860B;
+}
 .service-card img {
   width: 100%;
   height: auto;

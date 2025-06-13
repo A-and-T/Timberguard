@@ -19,7 +19,10 @@
         </p>
     </div>
 	<div class="gallery-grid" id="gallery"></div>
-<script src="js/content.js"></script>
+
+  <div id="footer"></div>
+</body>
+  <script src="js/content.js"></script>
 <script>
   const imageFolder = 'images/gallery/';
   const totalImages = 200; // maximum number of image numbers to check
@@ -45,8 +48,6 @@
     tryAddImage(i);
   }
 </script>
-
-
 <script>
   document.addEventListener("DOMContentLoaded", () => {
     const hamburger = document.getElementById('hamburger');
@@ -59,8 +60,6 @@
     }
   });
 </script>
-  <div id="footer"></div>
-</body>
   <script src="js/include.js"></script>
   <script>
     loadHTML("header", "header.html");

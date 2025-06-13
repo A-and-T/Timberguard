@@ -121,6 +121,29 @@ body {
     padding: 0;
 }
 
+.site-footer {
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+    padding: 2rem 1rem;
+    font-family: 'Anton', sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.site-footer a {
+    color: #FFD700; /* Light gold */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.site-footer a:hover,
+.site-footer a:active {
+    color: #B8860B; /* Dark gold */
+    text-decoration: underline;
+}
+
+
 .contact-details a {
     color: #FFD700; /* Light gold */
     text-decoration: none;

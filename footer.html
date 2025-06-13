@@ -1,5 +1,32 @@
 <footer class="site-footer">
-  <p>© 2024 TimberGuard Premium Seamless Gutters LLC</p>
-  <p>📍 4311 Claire Lane, Rhinelander, WI 54501 | ☎️ (715) 891-6844</p>
-  <p>Mon–Fri 8 am–5 pm, Sat by appointment</p>
+  <address>
+    📍 <a id="smart-map-link" href="#">
+      4311 Claire Ln, Rhinelander, WI 54501
+    </a>
+    <br>
+    ☎️ <a href="tel:+17158916844">(715) 891‑6844</a>
+  </address>
+
+  <p>
+    Hours: Mon–Fri, 7 AM–5 PM | Licensed Exterior Contractor
+  </p>
 </footer>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const link = document.getElementById("smart-map-link");
+    const address = "4311 Claire Ln, Rhinelander, WI 54501";
+    const encoded = encodeURIComponent(address);
+    const ua = navigator.userAgent;
+
+    if (/iPhone|iPad|iPod/i.test(ua)) {
+      link.href = `maps://?q=${encoded}`;
+    } else if (/Android/i.test(ua)) {
+      link.href = `geo:0,0?q=${encoded}`;
+    } else {
+      link.href = `https://www.google.com/maps/search/?api=1&query=${encoded}`;
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
+    }
+  });
+</script>

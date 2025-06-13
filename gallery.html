@@ -22,8 +22,7 @@
 
   <div id="footer"></div>
 </body>
-  <script src="js/content.js"></script>
-<script>
+  <script>
   const imageFolder = 'images/gallery/';
   const totalImages = 200; // maximum number of image numbers to check
   const imageLimit = 5;    // number of images to show at most
@@ -48,21 +47,6 @@
     tryAddImage(i);
   }
 </script>
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const hamburger = document.getElementById('hamburger');
-    const navLinks = document.getElementById('navLinks');
-
-    if (hamburger && navLinks) {
-      hamburger.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-      });
-    }
-  });
-</script>
+  <script src="js/content.js"></script>
   <script src="js/include.js"></script>
-  <script>
-    loadHTML("header", "header.html");
-    loadHTML("footer", "footer.html");
-  </script
 </html>

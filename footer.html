@@ -13,21 +13,3 @@
   </p>
 </footer>
 
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const link = document.getElementById("smart-map-link");
-    const address = "4311 Claire Ln, Rhinelander, WI 54501";
-    const encoded = encodeURIComponent(address);
-    const ua = navigator.userAgent;
-
-    if (/iPhone|iPad|iPod/i.test(ua)) {
-      link.href = `maps://?q=${encoded}`;
-    } else if (/Android/i.test(ua)) {
-      link.href = `geo:0,0?q=${encoded}`;
-    } else {
-      link.href = `https://www.google.com/maps/search/?api=1&query=${encoded}`;
-      link.target = "_blank";
-      link.rel = "noopener noreferrer";
-    }
-  });
-</script>

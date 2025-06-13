@@ -4,30 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="TimberGuard Premium Seamless Gutters proudly serves Rhinelander, Laona, Watersmeet, Merrill, Park Falls, and nearby towns with expert gutter installation, cleaning, and repairs." />
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "TimberGuard Premium Seamless Gutters LLC",
+  "image": "https://timberguardgutters.com/images/logo.jpg",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "4311 Claire Lane",
+    "addressLocality": "Rhinelander",
+    "addressRegion": "WI",
+    "postalCode": "54501",
+    "addressCountry": "US"
+  },
+  "telephone": "(715) 891-6844",
+  "url": "https://timberguardgutters.com",
+  "openingHours": ["Mo-Fr 08:00-17:00","Sa 09:00-12:00"],
+  "areaServed": {
+    "@type": "GeoCircle",
+    "geoMidpoint": {"@type": "GeoCoordinates","latitude":45.63,"longitude":-89.41},
+    "geoRadius": 80000
+  },
+  "sameAs": [
+    "https://www.facebook.com/profile.php?id=61565011572973"
+  ]
+}
+</script>
 
     <title>TimberGuard Premium Seamless Gutters</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
 </head>
 <body>
-	<header>
-		<div class="navbar">
-		  <div class="hamburger" id="hamburger">&#9776;</div>
-
-		  <div class="nav-links" id="navLinks">
-			<a href="index.html" class="nav-link">Home</a>
-			<a href="about.html" class="nav-link">About</a>
-			<a href="services.html" class="nav-link">Services</a>
-			<a href="gallery.html" class="nav-link">Gallery</a>
-			<a href="contact.html" class="nav-link">Contact</a>
-		  </div>
-
-		  <div class="logo">
-			<img src="images/logo.jpg" alt="TimberGuard Logo">
-		  </div>
-		</div>
-
-	</header>
+	<div id="header"></div>
 
     <div class="container">
 
@@ -37,6 +47,8 @@
         <a href="contact.html" class="quote-button">Request a quote</a>
     </div>
 </body>
+
+<div id="footer"></div>
 
 <script src="js/content.js"></script>
 
@@ -53,7 +65,11 @@
   });
 </script>
 
-
+  <script src="js/include.js"></script>
+  <script>
+    loadHTML("header", "header.html");
+    loadHTML("footer", "footer.html");
+  </script
 
 </html>
 

@@ -11,13 +11,21 @@ function loadHTML(id, file) {
 
       // Special behavior if it's the header
       if (id === "header") {
-        const hamburger = document.getElementById('hamburger');
-        const navLinks = document.getElementById('navLinks');
-        if (hamburger && navLinks) {
-          hamburger.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-          });
-        }
+		  const hamburger = document.getElementById("hamburger");
+		  const navLinks = document.getElementById("navLinks");
+		  const closeMenu = document.getElementById("closeMenu");
+
+		  if (hamburger && navLinks) {
+			hamburger.addEventListener("click", () => {
+			  navLinks.classList.toggle("active");
+			});
+		  }
+
+		  if (closeMenu) {
+			closeMenu.addEventListener("click", () => {
+			  navLinks.classList.remove("active");
+			});
+		  }
       }
 
       // Special behavior if it's the footer (add smart map link)

@@ -8,7 +8,7 @@ fetch('/content.json')
   .then(data => {
     const pages = ["index", "about", "services", "gallery", "contact"];
     const path = window.location.pathname.toLowerCase();
-    console.log("Current path:", path);
+    //console.log("Current path:", path);
 
     let page = "index"; // default
 
@@ -19,7 +19,7 @@ fetch('/content.json')
       }
     }
 
-    console.log("Detected page:", page);
+    //console.log("Detected page:", page);
 
     const content = data[page];
     if (!content) {

@@ -30,10 +30,10 @@ function loadHTML(id, file) {
 
       // Special behavior if it's the footer (add smart map link)
       if (id === "footer") {
-        console.log("Footer loaded ✅");
+        //console.log("Footer loaded ✅");
         const mapLink = document.getElementById("smart-map-link");
         if (!mapLink) {
-          console.log("Did not find Map link");
+          //console.log("Did not find Map link");
           return;
         }
 

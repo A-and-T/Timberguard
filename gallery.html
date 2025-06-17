@@ -25,56 +25,57 @@
 </body>
 <script>
   const imageFolder = 'images/gallery/';
-  const totalImages = 200;
-  let currentIndex = 1;
-  const imagesPerBatch = 5;
-
+  const totalImages = 200;            // max to scan
+  const imageLimitPerBatch = 5;       // images per lazy load
+  let currentImage = 0;
   const gallery = document.getElementById('gallery');
 
   function loadNextValidImageBatch() {
-    let imagesLoaded = 0;
+    let imagesToLoad = imageLimitPerBatch;
 
-    function tryLoadNext() {
-      if (currentIndex > totalImages || imagesLoaded >= imagesPerBatch) return;
+    function tryNextImage() {
+      if (imagesToLoad <= 0 || currentImage > totalImages) return;
 
       const img = new Image();
-      const fileName = `${imageFolder}img${currentIndex}.jpg`;
-      img.src = fileName;
-      img.alt = `Gallery image ${currentIndex}`;
+      const imgSrc = `${imageFolder}img${currentImage}.jpg`;
+      img.src = imgSrc;
+      img.alt = `Gallery image ${currentImage}`;
       img.className = 'gallery-img';
 
       img.onload = () => {
         gallery.appendChild(img);
-        imagesLoaded++;
-        currentIndex++;
-        tryLoadNext(); // keep going until batch full
+        imagesToLoad--;
+        currentImage++;
+        tryNextImage(); // load next if successful
       };
 
       img.onerror = () => {
-        currentIndex++;
-        tryLoadNext(); // skip and keep trying next
+        currentImage++;
+        tryNextImage(); // skip and try next if not found
       };
     }
 
-    tryLoadNext();
+    tryNextImage();
   }
 
-  // Load first batch
-  loadNextValidImageBatch();
-
-  // Observer to detect when bottom of page is visible
+  // Lazy load more images when reaching the bottom
   const observer = new IntersectionObserver((entries) => {
     if (entries[0].isIntersecting) {
       loadNextValidImageBatch();
     }
   });
 
-  // Sentinel div to trigger loading more
+  // Add sentinel trigger at bottom
   const sentinel = document.createElement('div');
   sentinel.style.height = '1px';
   gallery.after(sentinel);
   observer.observe(sentinel);
+
+  // Initial load (IMPORTANT: only one entry point)
+  loadNextValidImageBatch();
 </script>
+
+
 
 
   <script src="js/content.js"></script>
